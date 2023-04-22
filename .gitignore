@@ -1,0 +1,8 @@
+*.so
+*.lib
+*.obj
+*egg-info
+build
+.vscode
+__pycache__
+*.pyd
