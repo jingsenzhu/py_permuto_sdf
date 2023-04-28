@@ -1321,7 +1321,7 @@ integrate_with_weights_backward_gpu(
         for (int i=0; i<nr_samples; i++) {
             grad_weights_samples[idx_start+i][0] = 0;
             float weight_cur_sample=weights_samples[idx_start+i][0];
-            for (int d = 0; d < D; ++i) {
+            for (int d = 0; d < D; ++d) {
                 float feat_cur_sample = rgb_samples[idx_start+i][d];
                 grad_rgb_samples[idx_start+i][d] = grad_pred_feat_cur_ray[d] * weight_cur_sample;
                 grad_weights_samples[idx_start+i][0] += grad_pred_feat_cur_ray[d] * feat_cur_sample;
